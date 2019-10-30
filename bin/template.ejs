@@ -1,11 +1,10 @@
 <html>
 
 <head>
-    <title>本地环境</title>
+    <title></title>
     <meta charset='utf-8' />
     <meta name='renderer' content='webkit' />
-    <meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
-    />
+    <meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'/>
     <meta name='apple-mobile-web-app-capable' content='yes' />
     <meta name='full-screen' content='true' />
     <meta name='x5-fullscreen' content='true' />
@@ -26,6 +25,10 @@
             document.body.appendChild(script);
         }
     </script>
+    <script src="//m.img4399.com/rds/base/js/gb4399_jssdk-ex.js"></script>
+    <script src="//m.img4399.com/rds/base/js/gb4399_jssdk.min.js"></script>
+    <!-- built files will be auto injected -->
+    <%=htmlWebpackPlugin.options.slot%>
 </body>
 
 </html>

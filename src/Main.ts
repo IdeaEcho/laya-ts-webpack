@@ -10,6 +10,9 @@ class Main {
 		Laya.stage.screenMode = GameConfig.screenMode;
 		//兼容微信不支持加载scene后缀场景
 		Laya.URL.exportSceneToJson = GameConfig.exportSceneToJson;
+		
+		//自定义静态资源地址
+		window['publicpath'] && (Laya.URL.basePath = window['publicpath'])
 
 		//打开调试面板（通过IDE设置调试模式，或者url地址增加debug=true参数，均可打开调试面板）
 		let isDebug = Laya.Utils.getQueryString("debug") == "true"

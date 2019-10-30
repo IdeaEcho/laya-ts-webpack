@@ -104,14 +104,6 @@ const dev_config = {
             template: "./bin/index.html",
             slot: '',
         }),
-        // copy custom static assets
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, './bin'),
-                to: path.resolve(__dirname, './dist'),
-                ignore: ['libs/**']
-            }
-        ]),
         new FriendlyErrorsPlugin({
             compilationSuccessInfo: {
                 messages: [`Your application is running here: http://${localhost}:8080`],
@@ -148,7 +140,7 @@ const prod_config = {
         ]),
         new HtmlWebpackPlugin({
             hash: false,
-            template: "./bin/index.html",
+            template: "./bin/template.ejs",
             filename: path.resolve(__dirname.replace('build','server').replace(info.name,`views/${info.name}/index.ejs`)),
             inject: true,
             minify: {
@@ -156,6 +148,7 @@ const prod_config = {
                 collapseWhitespace: true,
                 removeAttributeQuotes: true
             },
+            slot: `<script type="text/javascript">window.publicpath = "<%=cdn%>"</script>`,
         }),
         new FriendlyErrorsPlugin({
             compilationSuccessInfo: {
