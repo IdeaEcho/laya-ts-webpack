@@ -27,8 +27,8 @@ npm run build主要的作用是用 webpack Copy 打包后的静态资源到生�
 
 
 4.定制
-
-webpack production配置了cdn地址的插槽，用于初始化Main.ts中的Laya.URL.basePath，不需要的话可以去掉。
+- webpack production 配置了cdn地址的插槽，用于初始化 Main.ts 中的 Laya.URL.basePath，不需要的话可以去掉。
+- webpack production `clean-webpack-plugin` 配置了 `dangerouslyAllowCleanPatternsOutsideProject: true,`，由于从 `clean-webpack-plugin` 2.0.0 开始去掉了root配置，root取output参数的值，clean插件删除不在webpack工作目录下的文件都会报 `operation not permitted`，所以如果你的 output 配置是在webpack工作目录下，就不需要配置这个参数。
 
 # 最后
-如有疑问，欢迎指出。
+如有疑问，欢迎指教。

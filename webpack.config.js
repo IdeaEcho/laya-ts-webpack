@@ -131,7 +131,9 @@ const prod_config = {
         concatenateModules: true,
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            dangerouslyAllowCleanPatternsOutsideProject: true,
+        }),
         new CopyWebpackPlugin([
             {
                 from: path.resolve(__dirname, './release/web'),
