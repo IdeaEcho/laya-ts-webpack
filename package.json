@@ -1,10 +1,11 @@
 {
   "name": "laya-ts-webpack",
   "version": "1.0.0",
-  "description": "",
+  "title": "配置游戏标题",
+  "description": "LayaAir Typescript Webpack 脚手架",
   "scripts": {
     "webpack-dev": "webpack --mode development",
-    "dev": "webpack-dev-server --mode development --inline --progress ",
+    "dev": "webpack-dev-server --mode development --inline --progress",
     "build": "webpack --ENV=PROD --mode production"
   },
   "author": "ChenShuyao <6044407@qq.com>",
@@ -21,5 +22,15 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdeaEcho/laya-ts-webpack.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/IdeaEcho/laya-ts-webpack/issues"
+  },
+  "homepage": "https://github.com/IdeaEcho/laya-ts-webpack#readme"
 }

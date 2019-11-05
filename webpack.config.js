@@ -150,6 +150,7 @@ const prod_config = {
                 collapseWhitespace: true,
                 removeAttributeQuotes: true
             },
+            title: info.title,
             slot: `<script type="text/javascript">window.publicpath = "<%=cdn%>"</script>`,
         }),
         new FriendlyErrorsPlugin({
