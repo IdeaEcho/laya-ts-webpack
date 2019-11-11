@@ -17,16 +17,16 @@
 </head>
 
 <body>
+    <%=htmlWebpackPlugin.options.slot%>
     <script type="text/javascript">
         function loadLib(url) {
             var script = document.createElement("script");
             script.async = false;
-            script.src = url;
+            script.src = window.publicpath + url;
             document.body.appendChild(script);
         }
     </script>
     <!-- built files will be auto injected -->
-    <%=htmlWebpackPlugin.options.slot%>
 </body>
 
 </html>
