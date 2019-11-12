@@ -132,12 +132,14 @@ const prod_config = {
     },
     plugins: [
         new CleanWebpackPlugin({
+            dry: true,
             dangerouslyAllowCleanPatternsOutsideProject: true,
         }),
         new CopyWebpackPlugin([
             {
                 from: path.resolve(__dirname, './release/web'),
-                to: path.resolve(__dirname.replace('build','release'))
+                to: path.resolve(__dirname.replace('build','release')),
+                force: true
             }
         ]),
         new HtmlWebpackPlugin({
